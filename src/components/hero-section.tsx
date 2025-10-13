@@ -39,7 +39,7 @@ export function HeroSection() {
       <div className="relative z-10 h-full flex items-center justify-start">
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
           <div className="max-w-5xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight mb-8 lowercase">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight mb-8">
               <br />
               AI solutions for{" "}
               <strong className="font-semibold underline-blue">business</strong><br />
@@ -62,7 +62,7 @@ export function HeroSection() {
 
       {/* Scroll indicator - Large black button */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-        <button className="bg-black border border-white/20 text-white text-sm md:text-base lowercase px-8 py-4 rounded-full hover:bg-white/5 transition-all">
+        <button className="bg-black border border-white/20 text-white text-sm md:text-base lowercase px-8 py-4 rounded-full cursor-pointer">
           scroll & discover more
         </button>
       </div>

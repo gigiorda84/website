@@ -9,8 +9,8 @@ export function ContactSection() {
       <div className="container mx-auto max-w-7xl">
         {/* Caroselling-inspired header */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-8 lowercase">
-            <span className="opacity-40">contact contact contact</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-8 lowercase">
+            <span className="text-[#0087ca]">(contact)</span>
           </h2>
           <div className="max-w-3xl space-y-4 mb-12">
             <p className="text-base md:text-lg text-white/90 leading-relaxed lowercase">

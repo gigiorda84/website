@@ -9,8 +9,8 @@ export function SolutionsSection() {
         <div className="grid lg:grid-cols-[200px_1fr] gap-12 lg:gap-20 items-start">
           {/* Left side - "servizi" title */}
           <div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white lowercase">
-              <span className="opacity-40">(services)</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-8 lowercase">
+              <span className="text-[#0087ca]">(services)</span>
             </h2>
           </div>
 

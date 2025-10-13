@@ -6,8 +6,8 @@ export function AboutIntroSection() {
           {/* Left side - Repeating text (absolute positioning) */}
           <div className="hidden lg:block absolute left-0 top-0">
             <div className="sticky top-32 space-y-2">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-8 lowercase">
-                <span className="opacity-40">(us)</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-8 lowercase">
+                <span className="text-[#0087ca]">(us)</span>
               </h2>
             </div>
           </div>
