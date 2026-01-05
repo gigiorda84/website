@@ -1,4 +1,6 @@
-export function ResultsSection() {
+import type { SiteCopy } from "@/content/site-copy";
+
+export function ResultsSection({ copy }: { copy: SiteCopy["results"] }) {
   return (
     <section id="case-studies" className="section-spacing px-6 md:px-12 lg:px-16 bg-black border-t border-white/5">
       <div className="container mx-auto max-w-7xl">
@@ -17,76 +19,53 @@ export function ResultsSection() {
 
           {/* Text content overlapping the image */}
           <div className="relative z-10 max-w-7xl grid lg:grid-cols-[1fr_auto] gap-12 items-center">
-            <blockquote className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-[1.1]">
-              Qualunque tecnologia sufficientemente avanzata è indistinguibile <strong className="font-semibold underline-blue">dalla magia.</strong>
+            <blockquote className="text-[28px] md:text-[36px] lg:text-[42px] xl:text-[52px] font-normal text-white leading-[1.1]">
+              {copy.quotePrefix}{" "}
+              <strong className="font-medium underline-blue">{copy.quoteHighlight}</strong>
             </blockquote>
 
             {/* Author name on the right, vertically centered */}
             <div className="hidden lg:block">
-              <p className="text-lg md:text-xl text-white whitespace-nowrap">Arthur C. Clarke</p>
+              <p className="text-[18px] md:text-[20px] text-white whitespace-nowrap">{copy.quoteAuthor}</p>
             </div>
           </div>
         </div>
 
         {/* Repeating header */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-8 lowercase">
-            <span className="opacity-40">(results)</span>
+          <h2 className="text-[32px] md:text-[36px] font-normal text-white mb-8 lowercase">
+            <span className="text-[#0087ca]">{copy.label}</span>
           </h2>
         </div>
 
         {/* Minimalist results grid - Caroselling style */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          <div>
-            <div className="text-5xl md:text-6xl font-light text-white mb-4">-40%</div>
-            <h4 className="text-lg font-semibold text-white mb-2 lowercase">human tickets</h4>
-            <p className="text-sm text-white/60 lowercase">ai agent for customer support</p>
-          </div>
-
-          <div>
-            <div className="text-5xl md:text-6xl font-light text-white mb-4">-25%</div>
-            <h4 className="text-lg font-semibold text-white mb-2 lowercase">machine downtime</h4>
-            <p className="text-sm text-white/60 lowercase">predictive maintenance on industrial plants</p>
-          </div>
-
-          <div>
-            <div className="text-5xl md:text-6xl font-light text-white mb-4">-15%</div>
-            <h4 className="text-lg font-semibold text-white mb-2 lowercase">energy consumption</h4>
-            <p className="text-sm text-white/60 lowercase">industrial hvac optimization</p>
-          </div>
-
-          <div>
-            <div className="text-5xl md:text-6xl font-light text-white mb-4">-70%</div>
-            <h4 className="text-lg font-semibold text-white mb-2 lowercase">processing time</h4>
-            <p className="text-sm text-white/60 lowercase">finance document automation</p>
-          </div>
+          {copy.metrics.map((m) => (
+            <div key={m.title}>
+              <div className="text-[48px] md:text-[56px] font-normal text-white mb-4">{m.value}</div>
+              <h4 className="text-[18px] font-medium text-white mb-2 lowercase">{m.title}</h4>
+              <p className="text-[14px] text-white/60 lowercase leading-relaxed">{m.subtitle}</p>
+            </div>
+          ))}
         </div>
 
         {/* Industries section */}
         <div className="mb-20">
-          <h3 className="text-2xl md:text-3xl font-light text-white mb-12 lowercase">
-            industries we <strong className="font-semibold underline-blue">serve</strong>
+          <h3 className="text-[24px] md:text-[28px] font-normal text-white mb-12 lowercase">
+            {copy.industriesTitle}{" "}
+            {copy.industriesHighlight ? (
+              <strong className="font-medium underline-blue">
+                {copy.industriesHighlight}
+              </strong>
+            ) : null}
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-2 lowercase">manufacturing</h4>
-              <p className="text-sm text-white/60 lowercase">operational efficiency & predictive maintenance</p>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-2 lowercase">energy & utilities</h4>
-              <p className="text-sm text-white/60 lowercase">consumption optimization & demand forecasting</p>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-2 lowercase">corporate & sme</h4>
-              <p className="text-sm text-white/60 lowercase">process automation & customer experience</p>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-2 lowercase">smart cities</h4>
-              <p className="text-sm text-white/60 lowercase">energy management & environmental monitoring</p>
-            </div>
+            {copy.industries.map((i) => (
+              <div key={i.title}>
+                <h4 className="text-[18px] font-medium text-white mb-2 lowercase">{i.title}</h4>
+                <p className="text-[14px] text-white/60 lowercase leading-relaxed">{i.subtitle}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

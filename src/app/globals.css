@@ -5,117 +5,85 @@
 
 /* Caroselling-inspired Design System */
 :root {
+  /* Primary Colors */
   --alpha-black: #000000;
   --alpha-white: #ffffff;
+  --alpha-dark-gray: #212121;
   --alpha-blue: #0087ca;
-  --alpha-accent: #0087ca;
 
-  --background: oklch(0.9779 0.0042 56.3756);
-  --foreground: oklch(0.2178 0 0);
-  --card: oklch(0.9779 0.0042 56.3756);
-  --card-foreground: oklch(0.2178 0 0);
-  --popover: oklch(0.9779 0.0042 56.3756);
-  --popover-foreground: oklch(0.2178 0 0);
-  --primary: oklch(0.4650 0.1470 24.9381);
-  --primary-foreground: oklch(1.0000 0 0);
-  --secondary: oklch(0.9625 0.0385 89.0943);
-  --secondary-foreground: oklch(0.4847 0.1022 75.1153);
-  --muted: oklch(0.9431 0.0068 53.4442);
-  --muted-foreground: oklch(0.4444 0.0096 73.6390);
-  --accent: oklch(0.9619 0.0580 95.6174);
-  --accent-foreground: oklch(0.3958 0.1331 25.7230);
-  --destructive: oklch(0.4437 0.1613 26.8994);
-  --destructive-foreground: oklch(1.0000 0 0);
-  --border: oklch(0.9355 0.0324 80.9937);
-  --input: oklch(0.9355 0.0324 80.9937);
-  --ring: oklch(0.4650 0.1470 24.9381);
-  --chart-1: oklch(0.5054 0.1905 27.5181);
-  --chart-2: oklch(0.4650 0.1470 24.9381);
-  --chart-3: oklch(0.3958 0.1331 25.7230);
-  --chart-4: oklch(0.5553 0.1455 48.9975);
-  --chart-5: oklch(0.4732 0.1247 46.2007);
-  --sidebar: oklch(0.9431 0.0068 53.4442);
-  --sidebar-foreground: oklch(0.2178 0 0);
-  --sidebar-primary: oklch(0.4650 0.1470 24.9381);
-  --sidebar-primary-foreground: oklch(1.0000 0 0);
-  --sidebar-accent: oklch(0.9619 0.0580 95.6174);
-  --sidebar-accent-foreground: oklch(0.3958 0.1331 25.7230);
-  --sidebar-border: oklch(0.9355 0.0324 80.9937);
-  --sidebar-ring: oklch(0.4650 0.1470 24.9381);
-  --font-sans: Poppins, sans-serif;
-  --font-serif: Libre Baskerville, serif;
-  --font-mono: IBM Plex Mono, monospace;
+  /* Semantic Colors - Caroselling Style */
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #212121;
+  --card-foreground: #ffffff;
+  --popover: #212121;
+  --popover-foreground: #ffffff;
+  --primary: #0087ca;
+  --primary-foreground: #ffffff;
+  --secondary: #212121;
+  --secondary-foreground: #ffffff;
+  --muted: #212121;
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  --accent: #0087ca;
+  --accent-foreground: #ffffff;
+  --destructive: #cf2e2e;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #0087ca;
+
+  /* Chart Colors */
+  --chart-1: #0087ca;
+  --chart-2: #212121;
+  --chart-3: #ffffff;
+  --chart-4: rgba(0, 135, 202, 0.7);
+  --chart-5: rgba(0, 135, 202, 0.5);
+
+  /* Sidebar Colors */
+  --sidebar: #000000;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #0087ca;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #0087ca;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #0087ca;
+
+  /* Typography */
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Courier New', monospace;
+
+  /* Border Radius - Caroselling Style */
   --radius: 0.375rem;
-  --shadow-x: 1px;
-  --shadow-y: 1px;
-  --shadow-blur: 16px;
-  --shadow-spread: -2px;
-  --shadow-opacity: 0.12;
-  --shadow-color: hsl(0 63% 18%);
-  --shadow-2xs: 1px 1px 16px -2px hsl(0 63% 18% / 0.06);
-  --shadow-xs: 1px 1px 16px -2px hsl(0 63% 18% / 0.06);
-  --shadow-sm: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 1px 2px -3px hsl(0 63% 18% / 0.12);
-  --shadow: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 1px 2px -3px hsl(0 63% 18% / 0.12);
-  --shadow-md: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 2px 4px -3px hsl(0 63% 18% / 0.12);
-  --shadow-lg: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 4px 6px -3px hsl(0 63% 18% / 0.12);
-  --shadow-xl: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 8px 10px -3px hsl(0 63% 18% / 0.12);
-  --shadow-2xl: 1px 1px 16px -2px hsl(0 63% 18% / 0.30);
-  --tracking-normal: 0em;
-  --spacing: 0.25rem;
+  --radius-button: 9999px;
+
+  /* Caroselling Spacing Scale (20-80) */
+  --spacing-20: 0.44rem;
+  --spacing-30: 0.88rem;
+  --spacing-40: 1.25rem;
+  --spacing-50: 1.88rem;
+  --spacing-60: 2.50rem;
+  --spacing-70: 3.75rem;
+  --spacing-80: 5.06rem;
+
+  /* Caroselling Natural Shadows */
+  --shadow-natural: 6px 6px 9px rgba(0, 0, 0, 0.25);
+  --shadow-natural-soft: 3px 3px 6px rgba(0, 0, 0, 0.15);
+  --shadow-natural-hard: 9px 9px 12px rgba(0, 0, 0, 0.35);
+
+  /* Keep minimal shadows for backwards compatibility */
+  --shadow-2xs: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-xs: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 4px 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 6px 6px 12px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 8px 8px 16px rgba(0, 0, 0, 0.18);
+  --shadow-2xl: 12px 12px 24px rgba(0, 0, 0, 0.25);
 }
 
-.dark {
-  --background: oklch(0.2161 0.0061 56.0434);
-  --foreground: oklch(0.9699 0.0013 106.4238);
-  --card: oklch(0.2685 0.0063 34.2976);
-  --card-foreground: oklch(0.9699 0.0013 106.4238);
-  --popover: oklch(0.2685 0.0063 34.2976);
-  --popover-foreground: oklch(0.9699 0.0013 106.4238);
-  --primary: oklch(0.6560 0.2304 28.3931);
-  --primary-foreground: oklch(0.9779 0.0042 56.3756);
-  --secondary: oklch(0.4064 0.0559 264.2048);
-  --secondary-foreground: oklch(0.9619 0.0580 95.6174);
-  --muted: oklch(0.2291 0.0060 56.0708);
-  --muted-foreground: oklch(0.8687 0.0043 56.3660);
-  --accent: oklch(0.5963 0.1398 241.3438);
-  --accent-foreground: oklch(0.9619 0.0580 95.6174);
-  --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: oklch(1.0000 0 0);
-  --border: oklch(0.3741 0.0087 67.5582);
-  --input: oklch(0.3741 0.0087 67.5582);
-  --ring: oklch(0.6560 0.2304 28.3931);
-  --chart-1: oklch(0.7106 0.1661 22.2162);
-  --chart-2: oklch(0.6368 0.2078 25.3313);
-  --chart-3: oklch(0.5771 0.2152 27.3250);
-  --chart-4: oklch(0.8369 0.1644 84.4286);
-  --chart-5: oklch(0.7686 0.1647 70.0804);
-  --sidebar: oklch(0.2161 0.0061 56.0434);
-  --sidebar-foreground: oklch(0.9699 0.0013 106.4238);
-  --sidebar-primary: oklch(0.6560 0.2304 28.3931);
-  --sidebar-primary-foreground: oklch(0.9779 0.0042 56.3756);
-  --sidebar-accent: oklch(0.5963 0.1398 241.3438);
-  --sidebar-accent-foreground: oklch(0.9619 0.0580 95.6174);
-  --sidebar-border: oklch(0.3741 0.0087 67.5582);
-  --sidebar-ring: oklch(0.6560 0.2304 28.3931);
-  --font-sans: Poppins, sans-serif;
-  --font-serif: Libre Baskerville, serif;
-  --font-mono: IBM Plex Mono, monospace;
-  --radius: 0.375rem;
-  --shadow-x: 1px;
-  --shadow-y: 1px;
-  --shadow-blur: 16px;
-  --shadow-spread: -2px;
-  --shadow-opacity: 0.12;
-  --shadow-color: hsl(0 63% 18%);
-  --shadow-2xs: 1px 1px 16px -2px hsl(0 63% 18% / 0.06);
-  --shadow-xs: 1px 1px 16px -2px hsl(0 63% 18% / 0.06);
-  --shadow-sm: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 1px 2px -3px hsl(0 63% 18% / 0.12);
-  --shadow: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 1px 2px -3px hsl(0 63% 18% / 0.12);
-  --shadow-md: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 2px 4px -3px hsl(0 63% 18% / 0.12);
-  --shadow-lg: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 4px 6px -3px hsl(0 63% 18% / 0.12);
-  --shadow-xl: 1px 1px 16px -2px hsl(0 63% 18% / 0.12), 1px 8px 10px -3px hsl(0 63% 18% / 0.12);
-  --shadow-2xl: 1px 1px 16px -2px hsl(0 63% 18% / 0.30);
-}
+/* Removed dark mode - Caroselling uses consistent black background */
 
 @theme inline {
   --color-background: var(--background);
@@ -174,55 +142,101 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-black text-white;
+    font-family: var(--font-sans);
+    font-weight: 400;
   }
 
-  /* Typography - Caroselling Style */
+  /* Caroselling Typography Scale */
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-normal leading-tight lowercase;
-    letter-spacing: -0.02em;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: normal;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-normal leading-tight lowercase;
-    letter-spacing: -0.01em;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: normal;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-normal leading-tight lowercase;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: normal;
   }
 
   h4 {
-    @apply text-xl md:text-2xl font-normal lowercase;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: normal;
   }
 
-  h5 {
-    @apply text-lg md:text-xl font-normal lowercase;
-  }
-
-  h6 {
-    @apply text-base md:text-lg font-normal lowercase;
+  h5, h6 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: normal;
   }
 
   p {
-    @apply leading-relaxed text-base md:text-lg;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
   }
 
   strong {
-    @apply font-semibold;
+    font-weight: 500;
   }
 }
 
 @layer utilities {
   /* Caroselling-inspired utilities */
 
-  /* Blue underline accent */
+  /* Natural shadow utilities */
+  .shadow-natural {
+    box-shadow: var(--shadow-natural);
+  }
+
+  .shadow-natural-soft {
+    box-shadow: var(--shadow-natural-soft);
+  }
+
+  .shadow-natural-hard {
+    box-shadow: var(--shadow-natural-hard);
+  }
+
+  /* Border utilities */
+  .border-2px {
+    border-width: 2px;
+  }
+
+  /* Pill button utility */
+  .rounded-pill {
+    border-radius: 9999px;
+  }
+
+  /* Blue underline accent - Caroselling style */
   .underline-blue {
     text-decoration: underline;
     text-decoration-color: #0087ca;
-    text-decoration-thickness: 8px;
-    text-underline-offset: 0px;
+    text-decoration-thickness: 6px;
+    text-underline-offset: -2px;
+    text-decoration-skip-ink: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .border-accent-blue {
+    border-bottom: 2px solid #0087ca;
+    padding-bottom: 2px;
+    display: inline-block;
   }
 
   /* Minimalist hover effect */
@@ -292,22 +306,15 @@
   }
 }
 
-/* Caroselling-inspired spacing */
+/* Caroselling-inspired spacing (20-80 scale) */
 .section-spacing {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: var(--spacing-70);
+  padding-bottom: var(--spacing-70);
 }
 
 @media (min-width: 768px) {
   .section-spacing {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section-spacing {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: var(--spacing-80);
+    padding-bottom: var(--spacing-80);
   }
 }

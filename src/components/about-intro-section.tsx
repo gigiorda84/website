@@ -1,13 +1,15 @@
-export function AboutIntroSection() {
+import type { SiteCopy } from "@/content/site-copy";
+
+export function AboutIntroSection({ copy }: { copy: SiteCopy["aboutIntro"] }) {
   return (
     <section className="section-spacing px-6 md:px-12 lg:px-16 bg-black">
       <div className="container mx-auto max-w-7xl">
         <div className="relative">
-          {/* Left side - Repeating text (absolute positioning) */}
+          {/* Left side - Label (absolute positioning) */}
           <div className="hidden lg:block absolute left-0 top-0">
-            <div className="sticky top-32 space-y-2">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-8 lowercase">
-                <span className="text-[#0087ca]">(us)</span>
+            <div className="sticky top-32">
+              <h2 className="text-[32px] md:text-[36px] font-normal lowercase">
+                <span className="text-[#0087ca]">{copy.label}</span>
               </h2>
             </div>
           </div>
@@ -19,27 +21,19 @@ export function AboutIntroSection() {
 
             {/* Right half - Main content */}
             <div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-8 leading-tight lowercase">
-              big things, like small ones, <strong className="font-semibold">everything excites us.</strong>
+            <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-normal text-white mb-8 leading-tight lowercase">
+              <strong className="font-medium">{copy.title}</strong>
             </h2>
 
-            <div className="space-y-4">
-              <p className="text-base md:text-lg text-white/90 leading-relaxed lowercase">
-                every day we nurture the ambition to <strong className="font-semibold">simplify complexity.</strong>
-              </p>
-
-              <p className="text-base md:text-lg text-white/90 leading-relaxed lowercase">
-                we don't love compromises, standard answers for any problem, but only <strong className="font-semibold">the solution studied for you.</strong>
-              </p>
-
-              <p className="text-base md:text-lg text-white/90 leading-relaxed lowercase">
-                we believe in ideas that know how to embrace a strategic vision.
-              </p>
-
-              <p className="text-base md:text-lg text-white/90 leading-relaxed lowercase">
-                we'll tell you we'll do things, <br />
-                and then we'll do them <strong className="font-semibold">really.</strong>
-              </p>
+            <div className="space-y-6">
+              {copy.paragraphs.map((p) => (
+                <p
+                  key={p}
+                  className="text-[16px] md:text-[18px] text-white/90 leading-relaxed lowercase"
+                >
+                  {p}
+                </p>
+              ))}
             </div>
             </div>
           </div>

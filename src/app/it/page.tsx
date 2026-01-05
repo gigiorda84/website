@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { AboutIntroSection } from "@/components/about-intro-section";
@@ -7,8 +8,21 @@ import { ResultsSection } from "@/components/results-section";
 import { ContactSection } from "@/components/contact-section";
 import { SITE_COPY } from "@/content/site-copy";
 
-export default function Home() {
-  const copy = SITE_COPY.en;
+export const metadata: Metadata = {
+  title: "Alpha Technology | Soluzioni AI per il business e l’automazione industriale",
+  description:
+    "Consulenza e sviluppo AI di Giuseppe Giordano & Marco Martellacci. -40% ticket, -25% downtime, -15% costi energetici. Soluzioni AI per business e industria.",
+  alternates: {
+    canonical: "https://alphatechnology.ai/it",
+    languages: {
+      en: "https://alphatechnology.ai",
+      it: "https://alphatechnology.ai/it",
+    },
+  },
+};
+
+export default function ItalianHome() {
+  const copy = SITE_COPY.it;
   return (
     <div className="min-h-screen bg-black">
       <Navbar copy={copy.navbar} />
@@ -17,7 +31,9 @@ export default function Home() {
       <SolutionsSection copy={copy.solutions} />
       <WhyAlphaSection copy={copy.why} />
       <ResultsSection copy={copy.results} />
-      <ContactSection basePath="" copy={copy.contact} />
+      <ContactSection basePath="/it" copy={copy.contact} />
     </div>
   );
 }
+
+
