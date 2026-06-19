@@ -79,6 +79,9 @@ export type SiteCopy = {
     measures: Array<{ name: string; tag: string; summary: string; facts: string[]; note: string }>;
     track: { title: string; text: string };
     help: { title: string; intro: string; steps: string[] };
+    faqTitle: string;
+    faq: Array<{ q: string; a: string }>;
+    logos: { caption: string; region: string; programme: string };
     cta: { title: string; button: string };
     disclaimer: string;
     teaser: { eyebrow: string; title: string; text: string; button: string };
@@ -394,6 +397,38 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
           "we build and deliver the solution",
           "we handle reporting and follow you until the grant is closed",
         ],
+      },
+      faqTitle: "frequently asked questions",
+      faq: [
+        {
+          q: "who can apply for the digitalization grants?",
+          a: "depending on the call, smes, micro-enterprises, self-employed professionals and mid-cap companies based in piedmont.",
+        },
+        {
+          q: "is custom software an eligible expense?",
+          a: "yes. custom software, ai and automation projects, plus related consulting and training, typically fall among the eligible expenses for digitalization calls.",
+        },
+        {
+          q: "how much can i get?",
+          a: "up to 70% — as a non-repayable grant (voucher digitalizzazione pmi) or as zero-interest financing plus a non-repayable share (digitalizzazione e efficientamento).",
+        },
+        {
+          q: "do you also handle the application?",
+          a: "yes. one team takes care of both the technology and the funding: we identify the call, design the eligible solution, support the application, build it and handle reporting until the grant is closed.",
+        },
+        {
+          q: "have you managed european grants?",
+          a: "yes — we have managed numerous european grants, including horizon. we know how a call is read, scored and reported.",
+        },
+        {
+          q: "when do the calls open?",
+          a: "the digitalizzazione e efficientamento measure is already opening in 2026 (line b from july, line a from october); the voucher digitalizzazione pmi is expected to open in october 2026. dates may change — talk to us to plan ahead.",
+        },
+      ],
+      logos: {
+        caption: "reference programmes",
+        region: "regione piemonte",
+        programme: "pr fesr 2021-2027",
       },
       cta: { title: "find out if your project can be funded", button: "talk to us" },
       disclaimer:
@@ -741,6 +776,38 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
           "sviluppiamo e rilasciamo la soluzione",
           "gestiamo la rendicontazione e ti seguiamo fino alla chiusura del grant",
         ],
+      },
+      faqTitle: "domande frequenti",
+      faq: [
+        {
+          q: "chi può accedere ai bandi di digitalizzazione?",
+          a: "a seconda del bando: pmi, micro imprese, liberi professionisti e imprese a media capitalizzazione con sede in piemonte.",
+        },
+        {
+          q: "lo sviluppo software è una spesa ammissibile?",
+          a: "sì. i progetti di software su misura, ai e automazione, insieme a consulenza e formazione collegate, rientrano di norma tra le spese ammissibili dei bandi di digitalizzazione.",
+        },
+        {
+          q: "quanto posso ottenere?",
+          a: "fino al 70% — a fondo perduto (voucher digitalizzazione pmi) oppure come finanziamento a tasso zero più una quota a fondo perduto (digitalizzazione e efficientamento).",
+        },
+        {
+          q: "vi occupate anche della domanda?",
+          a: "sì. un unico team segue tecnologia e finanziamento: individuiamo il bando, progettiamo la soluzione ammissibile, ti affianchiamo nella domanda, sviluppiamo e gestiamo la rendicontazione fino alla chiusura del grant.",
+        },
+        {
+          q: "avete già gestito bandi europei?",
+          a: "sì — abbiamo gestito numerosi bandi europei, incluso horizon. sappiamo come si legge, si valuta e si rendiconta un bando.",
+        },
+        {
+          q: "quando aprono i bandi?",
+          a: "la misura digitalizzazione e efficientamento apre già nel 2026 (linea b da luglio, linea a da ottobre); il voucher digitalizzazione pmi è atteso per ottobre 2026. le date possono variare — scrivici per pianificare in anticipo.",
+        },
+      ],
+      logos: {
+        caption: "programmi di riferimento",
+        region: "regione piemonte",
+        programme: "pr fesr 2021-2027",
       },
       cta: { title: "scopri se il tuo progetto è finanziabile", button: "parliamone" },
       disclaimer:

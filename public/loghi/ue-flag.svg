@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 60" role="img" aria-label="Emblema dell'Unione europea">
+  <rect width="90" height="60" fill="#003399"/>
+  <g id="star" fill="#FFCC00">
+    <path id="s" d="M0,-4 L0.90,-1.24 L3.80,-1.24 L1.46,0.47 L2.35,3.24 L0,1.53 L-2.35,3.24 L-1.46,0.47 L-3.80,-1.24 L-0.90,-1.24 Z"/>
+  </g>
+  <use href="#s" x="45" y="10"/>
+  <use href="#s" x="55" y="12.68"/>
+  <use href="#s" x="62.32" y="20"/>
+  <use href="#s" x="65" y="30"/>
+  <use href="#s" x="62.32" y="40"/>
+  <use href="#s" x="55" y="47.32"/>
+  <use href="#s" x="45" y="50"/>
+  <use href="#s" x="35" y="47.32"/>
+  <use href="#s" x="27.68" y="40"/>
+  <use href="#s" x="25" y="30"/>
+  <use href="#s" x="27.68" y="20"/>
+  <use href="#s" x="35" y="12.68"/>
+</svg>

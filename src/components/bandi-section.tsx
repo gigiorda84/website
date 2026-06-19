@@ -8,7 +8,21 @@ export function BandiSection({
   basePath?: "" | "/it";
   copy: SiteCopy["bandi"];
 }) {
+  // JSON-LD FAQ schema. Content is fully static (own site copy), and `<` is
+  // escaped so the serialized string can never break out of the <script> tag.
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: copy.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  const faqJsonLd = JSON.stringify(faqSchema).replace(/</g, "\\u003c");
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
     <section className="section-spacing px-6 md:px-12 lg:px-16 bg-black">
       <div className="container mx-auto max-w-5xl pt-24 md:pt-28">
         {/* Header */}
@@ -66,6 +80,19 @@ export function BandiSection({
           </ol>
         </div>
 
+        {/* FAQ */}
+        <div className="border-t-2 border-white/10 pt-10 mt-14">
+          <h2 className="text-[20px] md:text-[24px] font-normal text-white mb-8 lowercase">{copy.faqTitle}</h2>
+          <dl className="space-y-6">
+            {copy.faq.map((f) => (
+              <div key={f.q}>
+                <dt className="text-[15px] md:text-[16px] text-white font-medium lowercase mb-2">{f.q}</dt>
+                <dd className="text-[14px] md:text-[15px] text-white/60 lowercase leading-relaxed max-w-3xl">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
         {/* CTA */}
         <div className="border-t-2 border-white/10 pt-10 mt-14">
           <p className="text-[20px] md:text-[24px] font-normal text-white mb-6 lowercase">{copy.cta.title}</p>
@@ -77,11 +104,26 @@ export function BandiSection({
           </Link>
         </div>
 
+        {/* Reference programmes / logos */}
+        <div className="border-t border-white/10 pt-8 mt-14">
+          <p className="text-[12px] text-white/40 lowercase mb-5">{copy.logos.caption}</p>
+          <div className="flex flex-wrap items-center gap-5 md:gap-8">
+            <span className="flex items-center gap-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/loghi/ue-flag.svg" alt="Unione europea" width={42} height={28} className="rounded-[2px]" />
+              <span className="text-[13px] text-white/60 lowercase leading-tight">cofinanziato dall&apos;<br className="hidden sm:block" />unione europea</span>
+            </span>
+            <span className="text-[13px] text-white/60 lowercase">{copy.logos.region}</span>
+            <span className="text-[13px] text-white/60 lowercase">{copy.logos.programme}</span>
+          </div>
+        </div>
+
         {/* Disclaimer */}
-        <p className="text-[12px] text-white/35 lowercase leading-relaxed mt-14 max-w-3xl">
+        <p className="text-[12px] text-white/35 lowercase leading-relaxed mt-8 max-w-3xl">
           {copy.disclaimer}
         </p>
       </div>
     </section>
+    </>
   );
 }
