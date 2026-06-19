@@ -12,7 +12,7 @@ export default function CookiesPage() {
     <main className="min-h-screen bg-black px-6 md:px-12 lg:px-16 pt-28 pb-20">
       <div className="container mx-auto max-w-3xl">
         <h1 className="text-[32px] md:text-[42px] font-normal lowercase mb-10">
-          <span className="text-[#0087ca]">(cookie policy)</span>
+          <span className="text-[#0045FF]">(cookie policy)</span>
         </h1>
 
         <div className="space-y-8 text-white/85">

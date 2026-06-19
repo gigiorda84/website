@@ -9,7 +9,7 @@
   --alpha-black: #000000;
   --alpha-white: #ffffff;
   --alpha-dark-gray: #212121;
-  --alpha-blue: #0087ca;
+  --alpha-blue: #0045FF;
 
   /* Semantic Colors - Caroselling Style */
   --background: #000000;
@@ -18,22 +18,22 @@
   --card-foreground: #ffffff;
   --popover: #212121;
   --popover-foreground: #ffffff;
-  --primary: #0087ca;
+  --primary: #0045FF;
   --primary-foreground: #ffffff;
   --secondary: #212121;
   --secondary-foreground: #ffffff;
   --muted: #212121;
   --muted-foreground: rgba(255, 255, 255, 0.7);
-  --accent: #0087ca;
+  --accent: #0045FF;
   --accent-foreground: #ffffff;
   --destructive: #cf2e2e;
   --destructive-foreground: #ffffff;
   --border: rgba(255, 255, 255, 0.1);
   --input: rgba(255, 255, 255, 0.1);
-  --ring: #0087ca;
+  --ring: #0045FF;
 
   /* Chart Colors */
-  --chart-1: #0087ca;
+  --chart-1: #0045FF;
   --chart-2: #212121;
   --chart-3: #ffffff;
   --chart-4: rgba(0, 135, 202, 0.7);
@@ -42,12 +42,12 @@
   /* Sidebar Colors */
   --sidebar: #000000;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #0087ca;
+  --sidebar-primary: #0045FF;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #0087ca;
+  --sidebar-accent: #0045FF;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #0087ca;
+  --sidebar-ring: #0045FF;
 
   /* Typography */
   --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
@@ -225,7 +225,7 @@
   /* Blue underline accent - Caroselling style */
   .underline-blue {
     text-decoration: underline;
-    text-decoration-color: #0087ca;
+    text-decoration-color: #0045FF;
     text-decoration-thickness: 6px;
     text-underline-offset: -2px;
     text-decoration-skip-ink: none;
@@ -234,9 +234,33 @@
   }
 
   .border-accent-blue {
-    border-bottom: 2px solid #0087ca;
+    border-bottom: 2px solid #0045FF;
     padding-bottom: 2px;
     display: inline-block;
+  }
+
+  /* Highlight block — solid electric-blue behind words (editorial reference) */
+  .hl {
+    background-color: #0045FF;
+    color: #ffffff;
+    padding: 0 0.12em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  /* Display scale — oversized editorial headings */
+  .display-xl {
+    font-size: clamp(44px, 9vw, 112px);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+
+  .display-lg {
+    font-size: clamp(30px, 4.6vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    font-weight: 500;
   }
 
   /* Minimalist hover effect */
@@ -252,7 +276,7 @@
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #0087ca;
+    background-color: #0045FF;
     transition: width 0.3s ease;
   }
 

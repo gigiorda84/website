@@ -81,12 +81,12 @@ export function ContactSection({
   }
 
   return (
-    <section id="contact" className="section-spacing px-6 md:px-12 lg:px-16 bg-black border-t border-white/5">
+    <section id="contact" className="section-spacing px-6 md:px-12 lg:px-16 bg-black border-t border-white/10">
       <div className="container mx-auto max-w-7xl">
         {/* Header with social links */}
-        <div className="flex justify-between items-start mb-16">
-          <h2 className="text-[32px] md:text-[36px] font-normal lowercase">
-            <span className="text-[#0087ca]">{c.label}</span>
+        <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-16">
+          <h2 className="display-xl text-white lowercase leading-none">
+            {c.label}
           </h2>
           <div className="flex gap-8">
             {c.socials.map((s) => (
@@ -95,7 +95,7 @@ export function ContactSection({
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-[16px] lowercase underline-blue hover:opacity-70 transition-opacity"
+                className="text-white text-[16px] lowercase hover-underline hover:opacity-70 transition-opacity"
               >
                 {s.label}
               </a>
@@ -118,7 +118,7 @@ export function ContactSection({
             <div className="relative">
               <select
                 name="topic"
-                className="w-full bg-transparent border-b-2 border-white/30 text-white text-[16px] py-4 pr-8 appearance-none focus:outline-none focus:border-[#0087ca] transition-colors"
+                className="w-full bg-transparent border-b-2 border-white/30 text-white text-[16px] py-4 pr-8 appearance-none focus:outline-none focus:border-[#0045FF] transition-colors"
                 disabled={isLoading}
               >
                 <option value="">{c.form.topicPlaceholder}</option>
@@ -134,7 +134,7 @@ export function ContactSection({
             <div className="relative">
               <select
                 name="budget"
-                className="w-full bg-transparent border-b-2 border-white/30 text-white text-[16px] py-4 pr-8 appearance-none focus:outline-none focus:border-[#0087ca] transition-colors"
+                className="w-full bg-transparent border-b-2 border-white/30 text-white text-[16px] py-4 pr-8 appearance-none focus:outline-none focus:border-[#0045FF] transition-colors"
                 disabled={isLoading}
               >
                 <option value="">{c.form.budgetPlaceholder}</option>
@@ -151,7 +151,7 @@ export function ContactSection({
             <div className="relative">
               <select
                 name="discovery"
-                className="w-full bg-transparent border-b-2 border-white/30 text-white text-[16px] py-4 pr-8 appearance-none focus:outline-none focus:border-[#0087ca] transition-colors"
+                className="w-full bg-transparent border-b-2 border-white/30 text-white text-[16px] py-4 pr-8 appearance-none focus:outline-none focus:border-[#0045FF] transition-colors"
                 disabled={isLoading}
               >
                 <option value="">{c.form.discoveryPlaceholder}</option>
@@ -171,7 +171,7 @@ export function ContactSection({
                 name="name"
                 required
                 disabled={isLoading}
-                className="w-full bg-transparent border-b-2 border-white/30 text-white placeholder:text-white/50 text-[16px] py-4 focus:outline-none focus:border-[#0087ca] transition-colors"
+                className="w-full bg-transparent border-b-2 border-white/30 text-white placeholder:text-white/50 text-[16px] py-4 focus:outline-none focus:border-[#0045FF] transition-colors"
               />
             </div>
 
@@ -182,7 +182,7 @@ export function ContactSection({
                 placeholder={c.form.companyPlaceholder}
                 name="company"
                 disabled={isLoading}
-                className="w-full bg-transparent border-b-2 border-white/30 text-white placeholder:text-white/50 text-[16px] py-4 focus:outline-none focus:border-[#0087ca] transition-colors"
+                className="w-full bg-transparent border-b-2 border-white/30 text-white placeholder:text-white/50 text-[16px] py-4 focus:outline-none focus:border-[#0045FF] transition-colors"
               />
             </div>
 
@@ -193,7 +193,7 @@ export function ContactSection({
                 name="email"
                 required
                 disabled={isLoading}
-                className="w-full bg-transparent border-b-2 border-white/30 text-white placeholder:text-white/50 text-[16px] py-4 focus:outline-none focus:border-[#0087ca] transition-colors"
+                className="w-full bg-transparent border-b-2 border-white/30 text-white placeholder:text-white/50 text-[16px] py-4 focus:outline-none focus:border-[#0045FF] transition-colors"
               />
             </div>
           </div>
@@ -206,7 +206,7 @@ export function ContactSection({
               name="message"
               required
               disabled={isLoading}
-              className="w-full bg-transparent border-b-2 border-white/30 text-white placeholder:text-white/50 text-[16px] py-4 resize-none focus:outline-none focus:border-[#0087ca] transition-colors"
+              className="w-full bg-transparent border-b-2 border-white/30 text-white placeholder:text-white/50 text-[16px] py-4 resize-none focus:outline-none focus:border-[#0045FF] transition-colors"
             ></textarea>
           </div>
 
@@ -222,7 +222,7 @@ export function ContactSection({
               />
               <span>
                 {c.form.consentPrefix}{" "}
-                <Link href={privacyHref} className="underline hover:text-[#0087ca]">
+                <Link href={privacyHref} className="underline hover:text-[#0045FF]">
                   {c.form.consentLinkText}
                 </Link>
                 .
@@ -232,7 +232,7 @@ export function ContactSection({
             <button
               type="submit"
               disabled={isLoading}
-              className="px-12 py-4 border-2 border-white/20 text-white text-[14px] lowercase rounded-pill hover:bg-white/5 transition-all self-start md:self-auto disabled:opacity-50"
+              className="px-12 py-4 bg-[#0045FF] text-white text-[14px] lowercase rounded-pill hover:bg-[#0045FF]/85 transition-all self-start md:self-auto disabled:opacity-50"
             >
               {isLoading ? c.form.sending : c.form.send}
             </button>

@@ -55,10 +55,10 @@ export function HeroSection({ copy }: { copy: SiteCopy["hero"] }) {
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Background container for unicorn.studio integration */}
+      {/* Unicorn Studio — visible animated background */}
       <div
         id="unicorn-background"
-        className="absolute inset-0 z-0 opacity-65"
+        className="absolute inset-0 z-0 opacity-90"
         data-purpose="unicorn-studio-interactive-background"
       >
         <div
@@ -66,37 +66,27 @@ export function HeroSection({ copy }: { copy: SiteCopy["hero"] }) {
           style={{ width: '100%', height: '100%' }}
         />
       </div>
+      {/* Light legibility gradient — keeps the headline readable on the left */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent" />
 
-      {/* Content - Caroselling inspired */}
+      {/* Content — oversized editorial headline */}
       <div className="relative z-10 h-full flex items-center justify-start">
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
-          <div className="max-w-5xl">
-            <h1 className="text-[42px] md:text-[52px] lg:text-[62px] xl:text-[72px] font-normal text-white leading-tight mb-8">
-              <br />
+          <div className="max-w-6xl">
+            <h1 className="display-xl text-white lowercase mb-10">
               {copy.line1}{" "}
-              <strong className="font-medium underline-blue">{copy.highlight1}</strong>
+              <span className="hl">{copy.highlight1}</span>
               <br />
               {copy.and}{" "}
-              <strong className="font-medium underline-blue">{copy.highlight2}</strong>
-              <br />
+              <span className="underline-blue">{copy.highlight2}</span>
             </h1>
-                  {/* 
-            <div className="space-y-4 max-w-3xl">
-              <p className="text-base md:text-lg text-white/90 leading-relaxed">
-                we use <strong className="font-semibold">ai and automation</strong> to transform how businesses operate.
-              </p>
-              <p className="text-base md:text-lg text-white/90 leading-relaxed">
-                we build <strong className="font-semibold underline-blue">intelligent systems</strong>, streamlined workflows, and cutting-edge solutions that take your business into the future.
-              </p>
-            </div>
-            */}
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator - Large black button */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-        <button className="bg-black border-2 border-white/20 text-white text-sm md:text-base lowercase px-8 py-4 rounded-pill cursor-pointer hover:bg-white/5 transition-all">
+      {/* Scroll indicator — solid black button, centered to cover the unicorn.studio badge */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20">
+        <button className="bg-black border-2 border-white/20 text-white text-sm md:text-base lowercase px-8 py-4 rounded-pill cursor-pointer hover:bg-white/5 transition-colors">
           {copy.scrollCta}
         </button>
       </div>
