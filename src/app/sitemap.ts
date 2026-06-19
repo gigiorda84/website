@@ -1,10 +1,49 @@
 import { MetadataRoute } from 'next'
+import { SITE_COPY } from '@/content/site-copy'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://alphatechnology.ai'
   const currentDate = new Date()
 
+  const portfolioEntries: MetadataRoute.Sitemap = SITE_COPY.en.portfolio.projects.map((p) => ({
+    url: `${baseUrl}/portfolio/${p.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly',
+    priority: 0.6,
+    alternates: {
+      languages: {
+        en: `${baseUrl}/portfolio/${p.slug}`,
+        it: `${baseUrl}/it/portfolio/${p.slug}`,
+      },
+    },
+  }))
+
   return [
+    ...portfolioEntries,
+    {
+      url: `${baseUrl}/bandi`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/bandi`,
+          it: `${baseUrl}/it/bandi`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/it/bandi`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/bandi`,
+          it: `${baseUrl}/it/bandi`,
+        },
+      },
+    },
     {
       url: baseUrl,
       lastModified: currentDate,

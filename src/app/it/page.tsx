@@ -6,6 +6,7 @@ import { SolutionsSection } from "@/components/solutions-section";
 import { WhyAlphaSection } from "@/components/why-alpha-section";
 import { ResultsSection } from "@/components/results-section";
 import { PortfolioSection } from "@/components/portfolio-section";
+import { BandiTeaser } from "@/components/bandi-teaser";
 import { ContactSection } from "@/components/contact-section";
 import { SITE_COPY } from "@/content/site-copy";
 
@@ -28,11 +29,12 @@ export default function ItalianHome() {
     <div className="min-h-screen bg-black">
       <Navbar copy={copy.navbar} />
       <HeroSection copy={copy.hero} />
+      <BandiTeaser basePath="/it" copy={copy.bandi.teaser} />
       <AboutIntroSection copy={copy.aboutIntro} />
       <SolutionsSection copy={copy.solutions} />
       <WhyAlphaSection copy={copy.why} />
       <ResultsSection copy={copy.results} />
-      <PortfolioSection copy={copy.portfolio} />
+      <PortfolioSection basePath="/it" copy={copy.portfolio} />
       <ContactSection basePath="/it" copy={copy.contact} />
     </div>
   );
