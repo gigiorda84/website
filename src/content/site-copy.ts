@@ -46,6 +46,12 @@ export type SiteCopy = {
     industriesHighlight?: string;
     industries: Array<{ title: string; subtitle: string }>;
   };
+  portfolio: {
+    label: string;
+    title: string;
+    intro: string;
+    projects: Array<{ name: string; description: string }>;
+  };
   contact: {
     label: string;
     socials: Array<{ label: string; href: string }>;
@@ -68,8 +74,17 @@ export type SiteCopy = {
       genericError: string;
       networkError: string;
     };
+    brokerBrain: {
+      eyebrow: string;
+      name: string;
+      claim: string;
+      legal: string[];
+    };
     footer: {
-      copyright: string;
+      copyrightPrefix: string;
+      company: string;
+      companyHref: string;
+      copyrightSuffix: string;
       privacy: string;
       cookies: string;
       updateCookies: string;
@@ -186,6 +201,19 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         { title: "smart cities", subtitle: "energy management & environmental monitoring" },
       ],
     },
+    portfolio: {
+      label: "(portfolio)",
+      title: "tools we've built",
+      intro:
+        "custom software we designed and shipped — the kind of tool we can build for your business too.",
+      projects: [
+        { name: "lead forno", description: "lead generation and qualification management." },
+        { name: "backoffice ai", description: "ai automation for back-office processes and document workflows." },
+        { name: "determina ai", description: "ai for drafting public-administration decrees, with a dedicated app." },
+        { name: "reelificio pm", description: "production and management tool for short-form video reels." },
+        { name: "sonic walkscape", description: "gps-triggered sonic walking-tour app for nonprofits." },
+      ],
+    },
     contact: {
       label: "(contact)",
       socials: [
@@ -227,8 +255,24 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         genericError: "Something went wrong. Please try again.",
         networkError: "Network error. Please try again.",
       },
+      brokerBrain: {
+        eyebrow: "alpha technology is the software division of",
+        name: "BrokerBrain S.r.l.",
+        claim:
+          "we build custom tools for businesses. have a process to automate or an idea to ship? let's build it together.",
+        legal: [
+          "BrokerBrain S.r.l.",
+          "Via Vela 42, 10128 Torino",
+          "P.IVA 13423640013 · REA 1361882",
+          "Cap. soc. €10.000 i.v.",
+          "partner@brokerbrain.it · +39 011 188 36088",
+        ],
+      },
       footer: {
-        copyright: "Alpha | Copyright 2026 | P.IVA",
+        copyrightPrefix: "Alpha Technology | ©",
+        company: "BrokerBrain S.r.l.",
+        companyHref: "https://www.brokerbrain.it",
+        copyrightSuffix: "2026 | P.IVA 13423640013",
         privacy: "Privacy Policy",
         cookies: "Cookie Policy",
         updateCookies: "Update cookie preferences",
@@ -343,6 +387,19 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         { title: "smart cities", subtitle: "energy management e monitoraggio ambientale" },
       ],
     },
+    portfolio: {
+      label: "(portfolio)",
+      title: "tool che abbiamo realizzato",
+      intro:
+        "software su misura che abbiamo progettato e rilasciato — lo stesso tipo di tool che possiamo costruire per la tua azienda.",
+      projects: [
+        { name: "lead forno", description: "gestione e qualificazione della lead generation." },
+        { name: "backoffice ai", description: "automazione ai dei processi di backoffice e dei flussi documentali." },
+        { name: "determina ai", description: "ai per la redazione di determine della pubblica amministrazione, con app dedicata." },
+        { name: "reelificio pm", description: "tool di produzione e gestione di reel e contenuti video brevi." },
+        { name: "sonic walkscape", description: "app di tour audio a piedi attivati via gps, per il non profit." },
+      ],
+    },
     contact: {
       label: "(contatti)",
       socials: [
@@ -384,8 +441,24 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         genericError: "Qualcosa è andato storto. Riprova.",
         networkError: "Errore di rete. Riprova.",
       },
+      brokerBrain: {
+        eyebrow: "alpha technology è la divisione software di",
+        name: "BrokerBrain S.r.l.",
+        claim:
+          "sviluppiamo tool su misura per le aziende. hai un processo da automatizzare o un'idea da realizzare? costruiamola insieme.",
+        legal: [
+          "BrokerBrain S.r.l.",
+          "Via Vela 42, 10128 Torino",
+          "P.IVA 13423640013 · REA 1361882",
+          "Cap. soc. €10.000 i.v.",
+          "partner@brokerbrain.it · +39 011 188 36088",
+        ],
+      },
       footer: {
-        copyright: "Alpha | Copyright 2026 | P.IVA",
+        copyrightPrefix: "Alpha Technology | ©",
+        company: "BrokerBrain S.r.l.",
+        companyHref: "https://www.brokerbrain.it",
+        copyrightSuffix: "2026 | P.IVA 13423640013",
         privacy: "Privacy Policy",
         cookies: "Cookie Policy",
         updateCookies: "Aggiorna preferenze cookie",

@@ -251,11 +251,40 @@ export function ContactSection({
           ) : null}
         </form>
 
-        {/* Footer - Caroselling style */}
+        {/* Broker Brain - parent company / business positioning */}
         <div className="pt-8 mt-16 border-t-2 border-white/10">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div>
+              <p className="text-[13px] text-white/50 lowercase mb-1">{c.brokerBrain.eyebrow}</p>
+              <p className="text-[22px] md:text-[26px] font-medium text-white mb-4">{c.brokerBrain.name}</p>
+              <p className="text-[15px] md:text-[16px] text-white/70 lowercase leading-relaxed max-w-md">
+                {c.brokerBrain.claim}
+              </p>
+            </div>
+            <div className="md:text-right">
+              {c.brokerBrain.legal.map((line) => (
+                <p key={line} className="text-[13px] text-white/50 leading-relaxed">
+                  {line}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Footer - Caroselling style */}
+        <div className="pt-8 mt-12 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <p className="text-[14px] text-white/60 lowercase">
-              {c.footer.copyright}
+              {c.footer.copyrightPrefix}{" "}
+              <a
+                href={c.footer.companyHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white transition-colors"
+              >
+                {c.footer.company}
+              </a>{" "}
+              {c.footer.copyrightSuffix}
             </p>
             <div className="flex flex-wrap gap-4 text-[14px]">
               <Link href={privacyHref} className="text-white/60 hover:text-white transition-colors">
