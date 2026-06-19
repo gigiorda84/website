@@ -525,7 +525,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
     },
     hero: {
       line1: "Soluzioni AI per",
-      highlight1: "il business",
+      highlight1: "il business",
       and: "e",
       highlight2: "l’automazione industriale",
       scrollCta: "scorri & scopri di più",
