@@ -87,7 +87,7 @@ export function HeroSection({ copy }: { copy: SiteCopy["hero"] }) {
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20">
         <BookCallButton
           label={copy.bookCall}
-          className="bg-black border-2 border-white/20 text-white text-sm md:text-base lowercase min-w-[300px] px-8 py-4 rounded-pill cursor-pointer hover:bg-white/5 transition-colors"
+          className="bg-black border-2 border-white/20 text-white text-sm md:text-base lowercase min-w-[300px] px-8 py-4 rounded-pill cursor-pointer hover:bg-[#0045FF] hover:border-[#0045FF] transition-colors"
         />
       </div>
     </section>
