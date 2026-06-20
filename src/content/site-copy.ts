@@ -93,10 +93,6 @@ export type SiteCopy = {
     bookCallNote: string;
     socials: Array<{ label: string; href: string }>;
     form: {
-      topicPlaceholder: string;
-      topicOptions: Array<{ value: string; label: string }>;
-      discoveryPlaceholder: string;
-      discoveryOptions: Array<{ value: string; label: string }>;
       namePlaceholder: string;
       companyPlaceholder: string;
       emailPlaceholder: string;
@@ -449,21 +445,6 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         { label: "email", href: "mailto:info@alphatechnology.ai" },
       ],
       form: {
-        topicPlaceholder: "I would like to discuss",
-        topicOptions: [
-          { value: "business-automation", label: "Business automation" },
-          { value: "industrial-automation", label: "Industrial automation" },
-          { value: "ai-agents", label: "AI agents" },
-          { value: "data-platform", label: "Data / ML platform" },
-          { value: "other", label: "Other" },
-        ],
-        discoveryPlaceholder: "How did you find us?",
-        discoveryOptions: [
-          { value: "google", label: "Google search" },
-          { value: "social", label: "Social media" },
-          { value: "referral", label: "Someone told me about you" },
-          { value: "event", label: "Event / conference" },
-        ],
         namePlaceholder: "Name and Surname",
         companyPlaceholder: "Company (optional)",
         emailPlaceholder: "Your email",
@@ -821,21 +802,6 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         { label: "email", href: "mailto:info@alphatechnology.ai" },
       ],
       form: {
-        topicPlaceholder: "Vorrei parlare di",
-        topicOptions: [
-          { value: "business-automation", label: "Automazione business" },
-          { value: "industrial-automation", label: "Automazione industriale" },
-          { value: "ai-agents", label: "AI agent" },
-          { value: "data-platform", label: "Piattaforma dati / ML" },
-          { value: "other", label: "Altro" },
-        ],
-        discoveryPlaceholder: "Come ci hai trovati?",
-        discoveryOptions: [
-          { value: "google", label: "Ricerca Google" },
-          { value: "social", label: "Social media" },
-          { value: "referral", label: "Passaparola" },
-          { value: "event", label: "Evento / conferenza" },
-        ],
         namePlaceholder: "Nome e cognome",
         companyPlaceholder: "Azienda (opzionale)",
         emailPlaceholder: "La tua email",

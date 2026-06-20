@@ -39,8 +39,6 @@ export function ContactSection({
     const fd = new FormData(form);
 
     const payload = {
-      topic: String(fd.get("topic") ?? ""),
-      discovery: String(fd.get("discovery") ?? ""),
       name: String(fd.get("name") ?? ""),
       company: String(fd.get("company") ?? ""),
       email: String(fd.get("email") ?? ""),
@@ -123,40 +121,6 @@ export function ContactSection({
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            {/* First row */}
-            <div className="relative">
-              <select
-                name="topic"
-                className="w-full bg-transparent border-b-2 border-white/30 text-white text-[16px] py-4 pr-8 appearance-none focus:outline-none focus:border-[#0045FF] transition-colors"
-                disabled={isLoading}
-              >
-                <option value="">{c.form.topicPlaceholder}</option>
-                {c.form.topicOptions.map((o) => (
-                  <option key={o.value} value={o.value}>
-                    {o.label}
-                  </option>
-                ))}
-              </select>
-              <span className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-xl">+</span>
-            </div>
-
-            {/* Second row */}
-            <div className="relative">
-              <select
-                name="discovery"
-                className="w-full bg-transparent border-b-2 border-white/30 text-white text-[16px] py-4 pr-8 appearance-none focus:outline-none focus:border-[#0045FF] transition-colors"
-                disabled={isLoading}
-              >
-                <option value="">{c.form.discoveryPlaceholder}</option>
-                {c.form.discoveryOptions.map((o) => (
-                  <option key={o.value} value={o.value}>
-                    {o.label}
-                  </option>
-                ))}
-              </select>
-              <span className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-xl">+</span>
-            </div>
-
             <div>
               <input
                 type="text"
