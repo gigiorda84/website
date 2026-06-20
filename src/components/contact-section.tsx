@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { BookCallButton } from "@/components/book-call-button";
 import type { SiteCopy } from "@/content/site-copy";
 import { SITE_COPY } from "@/content/site-copy";
 
@@ -39,7 +40,6 @@ export function ContactSection({
 
     const payload = {
       topic: String(fd.get("topic") ?? ""),
-      budget: String(fd.get("budget") ?? ""),
       discovery: String(fd.get("discovery") ?? ""),
       name: String(fd.get("name") ?? ""),
       company: String(fd.get("company") ?? ""),
@@ -103,6 +103,15 @@ export function ContactSection({
           </div>
         </div>
 
+        {/* Primary CTA — book a call */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-16">
+          <BookCallButton
+            label={c.bookCall}
+            className="px-10 py-4 bg-[#0045FF] text-white text-[14px] lowercase rounded-pill hover:bg-[#0045FF]/85 transition-all cursor-pointer self-start"
+          />
+          <span className="text-[14px] text-white/50 lowercase">{c.bookCallNote}</span>
+        </div>
+
         {/* Contact Form - Caroselling exact layout */}
         <form className="ml-auto max-w-4xl" onSubmit={onSubmit}>
           {/* Honeypot anti-spam (should remain empty) */}
@@ -123,22 +132,6 @@ export function ContactSection({
               >
                 <option value="">{c.form.topicPlaceholder}</option>
                 {c.form.topicOptions.map((o) => (
-                  <option key={o.value} value={o.value}>
-                    {o.label}
-                  </option>
-                ))}
-              </select>
-              <span className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-xl">+</span>
-            </div>
-
-            <div className="relative">
-              <select
-                name="budget"
-                className="w-full bg-transparent border-b-2 border-white/30 text-white text-[16px] py-4 pr-8 appearance-none focus:outline-none focus:border-[#0045FF] transition-colors"
-                disabled={isLoading}
-              >
-                <option value="">{c.form.budgetPlaceholder}</option>
-                {c.form.budgetOptions.map((o) => (
                   <option key={o.value} value={o.value}>
                     {o.label}
                   </option>

@@ -19,12 +19,13 @@ export type SiteCopy = {
     highlight1: string;
     and: string;
     highlight2: string;
-    scrollCta: string;
+    bookCall: string;
   };
   aboutIntro: {
     label: string;
     title: string;
     paragraphs: string[];
+    founders: string;
   };
   solutions: {
     label: string;
@@ -88,12 +89,12 @@ export type SiteCopy = {
   };
   contact: {
     label: string;
+    bookCall: string;
+    bookCallNote: string;
     socials: Array<{ label: string; href: string }>;
     form: {
       topicPlaceholder: string;
       topicOptions: Array<{ value: string; label: string }>;
-      budgetPlaceholder: string;
-      budgetOptions: Array<{ value: string; label: string }>;
       discoveryPlaceholder: string;
       discoveryOptions: Array<{ value: string; label: string }>;
       namePlaceholder: string;
@@ -152,17 +153,18 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       highlight1: "business",
       and: "&",
       highlight2: "industrial automation",
-      scrollCta: "scroll & discover more",
+      bookCall: "book a call",
     },
     aboutIntro: {
       label: "(us)",
       title: "big things, like small ones, everything excites us.",
       paragraphs: [
         "every day we nurture the ambition to simplify complexity.",
-        "we don't like compromises or standard answers — only the solution studied for you.",
-        "we believe in ideas that embrace a strategic vision.",
-        "we'll tell you we'll do things, and then we'll do them really.",
+        "over 40 years of combined experience: we come from leading enerbrain as ceo and cto, where we took ai and automation from research to industry.",
+        "we collaborate with politecnico di torino, università di torino and collegio carlo alberto.",
+        "we'll tell you we'll do things, and then we'll do them — for real.",
       ],
+      founders: "giuseppe giordano — ceo · marco martellacci — cto",
     },
     solutions: {
       label: "(services)",
@@ -382,7 +384,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       track: {
         title: "a track record with grants",
         text:
-          "we have managed numerous european grants, including horizon. we know how a call is read, scored and reported — and we put that experience to work on your project.",
+          "we have managed over 10 national and european grants worth more than €5m, including horizon 2020. we know how a call is read, scored and reported — and we put that experience to work on your project.",
       },
       help: {
         title: "how we support you, end to end",
@@ -415,7 +417,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         },
         {
           q: "have you managed european grants?",
-          a: "yes — we have managed numerous european grants, including horizon. we know how a call is read, scored and reported.",
+          a: "yes — we have managed over 10 national and european grants worth more than €5m, including horizon 2020. we know how a call is read, scored and reported.",
         },
         {
           q: "when do the calls open?",
@@ -434,12 +436,14 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         eyebrow: "(funding)",
         title: "up to 70% funding on your digital project",
         text:
-          "the software, ai and automation we build can be eligible expenses under piedmont's digitalization grants — and we accompany you through the whole grant journey, including european calls like horizon.",
+          "the software, ai and automation we build can be eligible expenses under piedmont's digitalization grants — and we accompany you through the whole grant journey, including european calls like horizon 2020.",
         button: "discover the grants",
       },
     },
     contact: {
       label: "(contact)",
+      bookCall: "book a call",
+      bookCallNote: "first call, no commitment",
       socials: [
         { label: "linkedin", href: "https://linkedin.com/company/alpha-technology-ai" },
         { label: "email", href: "mailto:info@alphatechnology.ai" },
@@ -452,13 +456,6 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
           { value: "ai-agents", label: "AI agents" },
           { value: "data-platform", label: "Data / ML platform" },
           { value: "other", label: "Other" },
-        ],
-        budgetPlaceholder: "Budget",
-        budgetOptions: [
-          { value: "0-2000", label: "0-2.000" },
-          { value: "2000-5000", label: "2.000-5.000" },
-          { value: "5000-20000", label: "5.000-20.000" },
-          { value: "other", label: "Other / I don't know" },
         ],
         discoveryPlaceholder: "How did you find us?",
         discoveryOptions: [
@@ -528,17 +525,18 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       highlight1: "il business",
       and: "e",
       highlight2: "l’automazione industriale",
-      scrollCta: "scorri & scopri di più",
+      bookCall: "prenota una call",
     },
     aboutIntro: {
       label: "(noi)",
       title: "le grandi cose, come le piccole, ci entusiasmano.",
       paragraphs: [
         "ogni giorno coltiviamo l’ambizione di semplificare la complessità.",
-        "non amiamo i compromessi o risposte standard — solo la soluzione pensata per te.",
-        "crediamo in idee che abbracciano una visione strategica.",
+        "oltre 40 anni di esperienza combinata: veniamo dalla guida di enerbrain come ceo e cto, dove abbiamo portato l’ai e l’automazione dalla ricerca all’industria.",
+        "collaboriamo con politecnico di torino, università di torino e collegio carlo alberto.",
         "ti diremo che faremo le cose, e poi le faremo davvero.",
       ],
+      founders: "giuseppe giordano — ceo · marco martellacci — cto",
     },
     solutions: {
       label: "(servizi)",
@@ -758,7 +756,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       track: {
         title: "un track record sui bandi",
         text:
-          "abbiamo gestito numerosi bandi europei, incluso horizon. sappiamo come si legge, si valuta e si rendiconta un bando — e mettiamo questa esperienza al servizio del tuo progetto.",
+          "abbiamo gestito oltre 10 bandi nazionali ed europei per importi superiori a €5m, incluso horizon 2020. sappiamo come si legge, si valuta e si rendiconta un bando — e mettiamo questa esperienza al servizio del tuo progetto.",
       },
       help: {
         title: "come ti affianchiamo, dall'inizio alla fine",
@@ -791,7 +789,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         },
         {
           q: "avete già gestito bandi europei?",
-          a: "sì — abbiamo gestito numerosi bandi europei, incluso horizon. sappiamo come si legge, si valuta e si rendiconta un bando.",
+          a: "sì — abbiamo gestito oltre 10 bandi nazionali ed europei per importi superiori a €5m, incluso horizon 2020. sappiamo come si legge, si valuta e si rendiconta un bando.",
         },
         {
           q: "quando aprono i bandi?",
@@ -810,12 +808,14 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         eyebrow: "(bandi)",
         title: "fino al 70% di finanziamento sul tuo progetto digitale",
         text:
-          "il software, l'ai e l'automazione che realizziamo possono essere spese ammissibili sui bandi di digitalizzazione del piemonte — e ti accompagniamo lungo tutto il percorso del grant, inclusi i bandi europei come horizon.",
+          "il software, l'ai e l'automazione che realizziamo possono essere spese ammissibili sui bandi di digitalizzazione del piemonte — e ti accompagniamo lungo tutto il percorso del grant, inclusi i bandi europei come horizon 2020.",
         button: "scopri i bandi",
       },
     },
     contact: {
       label: "(contatti)",
+      bookCall: "prenota una call",
+      bookCallNote: "prima call senza impegno",
       socials: [
         { label: "linkedin", href: "https://linkedin.com/company/alpha-technology-ai" },
         { label: "email", href: "mailto:info@alphatechnology.ai" },
@@ -828,13 +828,6 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
           { value: "ai-agents", label: "AI agent" },
           { value: "data-platform", label: "Piattaforma dati / ML" },
           { value: "other", label: "Altro" },
-        ],
-        budgetPlaceholder: "Budget",
-        budgetOptions: [
-          { value: "0-2000", label: "0-2.000" },
-          { value: "2000-5000", label: "2.000-5.000" },
-          { value: "5000-20000", label: "5.000-20.000" },
-          { value: "other", label: "Altro / Non lo so" },
         ],
         discoveryPlaceholder: "Come ci hai trovati?",
         discoveryOptions: [

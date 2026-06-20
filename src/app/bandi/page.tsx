@@ -9,7 +9,7 @@ const copy = SITE_COPY.en;
 export const metadata: Metadata = {
   title: "Piedmont SME digitalization grants | Alpha Technology",
   description:
-    "Custom software, AI and automation eligible for Piedmont's digitalization grants (Voucher Digitalizzazione PMI 2026, Digitalizzazione e Efficientamento 2026). We identify the call and accompany you through the whole grant — including Horizon.",
+    "Custom software, AI and automation eligible for Piedmont's digitalization grants (Voucher Digitalizzazione PMI 2026, Digitalizzazione e Efficientamento 2026). We identify the call and accompany you through the whole grant — including Horizon 2020.",
   alternates: {
     canonical: "https://alphatechnology.ai/bandi",
     languages: {

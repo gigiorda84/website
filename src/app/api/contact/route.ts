@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 
 type ContactPayload = {
   topic?: string;
-  budget?: string;
   discovery?: string;
   name?: string;
   company?: string;
@@ -45,7 +44,6 @@ export async function POST(req: Request) {
   const consent = Boolean(body?.consent);
 
   const topic = trimOrUndefined(body?.topic);
-  const budget = trimOrUndefined(body?.budget);
   const discovery = trimOrUndefined(body?.discovery);
   const company = trimOrUndefined(body?.company);
 
@@ -94,7 +92,6 @@ export async function POST(req: Request) {
     email,
     message,
     topic,
-    budget,
     discovery,
     company,
     meta: { userAgent, referrer },

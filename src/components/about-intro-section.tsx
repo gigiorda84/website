@@ -26,6 +26,9 @@ export function AboutIntroSection({ copy }: { copy: SiteCopy["aboutIntro"] }) {
                 {p}
               </p>
             ))}
+            <p className="text-[14px] md:text-[15px] text-white/50 lowercase pt-2">
+              {copy.founders}
+            </p>
           </div>
         </div>
       </div>

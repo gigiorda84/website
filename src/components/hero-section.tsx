@@ -1,8 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { useEffect } from "react";
+import { BookCallButton } from "@/components/book-call-button";
 import type { SiteCopy } from "@/content/site-copy";
 
 export function HeroSection({ copy }: { copy: SiteCopy["hero"] }) {
@@ -84,11 +83,12 @@ export function HeroSection({ copy }: { copy: SiteCopy["hero"] }) {
         </div>
       </div>
 
-      {/* Scroll indicator — solid black button, centered to cover the unicorn.studio badge */}
+      {/* Primary CTA — solid black button, centered to cover the unicorn.studio badge */}
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20">
-        <button className="bg-black border-2 border-white/20 text-white text-sm md:text-base lowercase px-8 py-4 rounded-pill cursor-pointer hover:bg-white/5 transition-colors">
-          {copy.scrollCta}
-        </button>
+        <BookCallButton
+          label={copy.bookCall}
+          className="bg-black border-2 border-white/20 text-white text-sm md:text-base lowercase px-8 py-4 rounded-pill cursor-pointer hover:bg-white/5 transition-colors"
+        />
       </div>
     </section>
   );
