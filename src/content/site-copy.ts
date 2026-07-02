@@ -305,6 +305,25 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
           ],
         },
         {
+          slug: "valuengyne",
+          name: "valuengyne",
+          description: "positioning and go-to-market platform for startups.",
+          sector: "startup advisory / venture & accelerator portfolio support",
+          technologies: ["proprietary digital platform", "multi-model ai (llm, predictive, vertical)", "startup & sector benchmark databases", "crm & workflow automation", "data-driven decision systems"],
+          businessNeed:
+            "most startups fail not on execution but on value creation — they scale before validating a unique, reachable and defensible market position, burning runway without a clear go-to-market strategy.",
+          valueProposition:
+            "turns early promise into sustainable revenue: a validated, defensible positioning and a focused 12-month go-to-market plan, executed and iterated with data — so founders grow on the right vertical instead of guessing.",
+          features: [
+            "market-vertical and value-creation analysis",
+            "competitive positioning mapping",
+            "technology and scalability assessment",
+            "12-month go-to-market plan with revenue focus areas",
+            "execution support with progress monitoring and iteration",
+            "portfolio-wide reporting dashboard for funds and accelerators",
+          ],
+        },
+        {
           slug: "reelificio-pm",
           name: "reelificio pm",
           description: "production and management tool for short-form video reels.",
@@ -659,6 +678,25 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
             "bozza ai della motivazione della determina",
             "estrazione ai dai pdf dei preventivi fornitore",
             "dettatura vocale e isolamento multi-tenant per comune",
+          ],
+        },
+        {
+          slug: "valuengyne",
+          name: "valuengyne",
+          description: "piattaforma di posizionamento e go-to-market per startup.",
+          sector: "advisory startup / supporto al portfolio di fondi e acceleratori",
+          technologies: ["piattaforma digitale proprietaria", "ai multi-modello (llm, predittiva, verticale)", "database di startup e benchmark di settore", "crm e automazione dei workflow", "sistemi decisionali data-driven"],
+          businessNeed:
+            "la maggior parte delle startup non fallisce sull'esecuzione ma sulla creazione di valore — scalano prima di validare un posizionamento di mercato unico, raggiungibile e difendibile, bruciando runway senza una go-to-market chiara.",
+          valueProposition:
+            "trasforma la promessa iniziale in crescita di ricavi sostenibile: un posizionamento validato e difendibile e un piano go-to-market a 12 mesi, eseguito e iterato con i dati — così i founder crescono sul verticale giusto invece di andare a tentativi.",
+          features: [
+            "analisi dei verticali di mercato e della creazione di valore",
+            "mappatura del posizionamento competitivo",
+            "valutazione di tecnologia e scalabilità",
+            "piano go-to-market a 12 mesi con aree di focus sui ricavi",
+            "supporto all'esecuzione con monitoraggio dei progressi e iterazione",
+            "dashboard di reporting sull'intero portfolio per fondi e acceleratori",
           ],
         },
         {
